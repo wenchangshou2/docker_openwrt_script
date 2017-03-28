@@ -22,7 +22,7 @@ chk_mkdir $rootdir/build_dir
 cd $rootdir
 if [ ! -d $rootdir/openwrt.git -a ! -d $rootdir/openwrt.git/.git -a ! -f $rootdir/README ]; then
   show -i "克隆新版openwrt"
-  git clone http://git.openwrt.org/openwrt.git openwrt.git
+  git clone https://git.oschina.net/wenchangshou/openwrt.git openwrt.git
   #git clone http://git.openwrt.org/14.07/openwrt.git openwrt.git
 else
   show -i "更新最新版openwrt"
