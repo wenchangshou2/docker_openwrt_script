@@ -6,3 +6,7 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list &&\
     apt-get install -y wget unzip git-core  sudo python-pip
 COPY init.sh /works/init.sh
 RUN sh /works/init.sh
+RUN useradd -m openwrt  &&\
+    echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt
+COPY install_openwrt.sh /works/openwrt3/install_openwrt.sh
+RUN sh /works/oepwnrt3/install_openwrt.sh
