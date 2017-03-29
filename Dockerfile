@@ -8,6 +8,6 @@ COPY init.sh /works/init.sh
 RUN sh /works/init.sh
 RUN useradd -m openwrt  &&\
     echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt &&\
-    rm -rf /works/openwrt3/install_openwrt.sh
-COPY install_openwrt.sh /works/openwrt3/install_openwrt.sh
-RUN cd /works/openwrt3 && sh install_openwrt.sh
+    rm -rf /works/openwrt/install_openwrt.sh
+COPY install_openwrt.sh /works/openwrt/install_openwrt.sh
+RUN cd /works/openwrt && sh install_openwrt.sh
