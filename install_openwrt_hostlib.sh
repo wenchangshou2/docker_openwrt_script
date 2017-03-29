@@ -5,8 +5,8 @@ echo "===INIT==UBUNTU=OPENWRT=HOSTLIB==="
 sudo echo "SUDO ROOT"
 
 #read -p "是否安装全编译工具支持(y/N)" READMODE
-READMODE = 'y'
-
+READMODE = "y"
+pip install --upgrade pip
 show t "安装pyyaml工具"
   install_pip_pack "pyyaml"
 

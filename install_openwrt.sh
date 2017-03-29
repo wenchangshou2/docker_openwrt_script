@@ -15,7 +15,7 @@ rootdir=/works/openwrt
 if [ ! -d $rootdir ]; then
   openwrt chk_mkdir $rootdir
 fi
-  openwrt chk_mkdir $rootdir/works
+ chk_mkdir $rootdir/works
  chk_mkdir $rootdir/backup
  chk_mkdir $rootdir/staging_dir
  chk_mkdir $rootdir/build_dir
