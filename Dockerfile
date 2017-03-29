@@ -11,4 +11,5 @@ RUN useradd -m openwrt  &&\
     rm -rf /works/openwrt/install_openwrt.sh
 RUN apt-get install -y libssl-dev
 COPY install_openwrt.sh /works/openwrt/install_openwrt.sh
-RUN cd /works/openwrt && ./install_openwrt.sh
+COPY install_openwrt_hostlib.sh /works/openwrt/
+RUN cd /works/openwrt && ./install_openwrt_hostlib.sh && ./install_openwrt.sh
