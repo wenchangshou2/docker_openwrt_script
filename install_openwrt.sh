@@ -15,19 +15,19 @@ rootdir=/works/openwrt
 if [ ! -d $rootdir ]; then
   sudo -iu openwrt chk_mkdir $rootdir
 fi
- sudo -iu chk_mkdir $rootdir/works
- sudo -iu chk_mkdir $rootdir/backup
- sudo -iu chk_mkdir $rootdir/staging_dir
- sudo -iu chk_mkdir $rootdir/build_dir
+ sudo -iu openwrt chk_mkdir $rootdir/works
+ sudo -iu openwrt chk_mkdir $rootdir/backup
+ sudo -iu openwrt chk_mkdir $rootdir/staging_dir
+ sudo -iu openwrt chk_mkdir $rootdir/build_dir
 cd $rootdir
 if [ ! -d $rootdir/openwrt.git -a ! -d $rootdir/openwrt.git/.git -a ! -f $rootdir/README ]; then
   show -i "克隆新版openwrt"
-  sudo -iu git clone https://git.oschina.net/wenchangshou/openwrt.git openwrt.git
+  sudo -iu openwrt git clone https://git.oschina.net/wenchangshou/openwrt.git openwrt.git
   #git clone http://git.openwrt.org/14.07/openwrt.git openwrt.git
 else
   show -i "更新最新版openwrt"
   cd openwrt.git
-  sudo -iu git pull
+  sudo -iu openwrt git pull
 fi
 
 cd $rootdir/openwrt.git
