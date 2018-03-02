@@ -1,0 +1,2 @@
+# docker_openwrt_script
+基于docker技术，自动生成新的openwrt开发环境
